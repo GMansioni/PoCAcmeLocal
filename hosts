@@ -1,0 +1,9 @@
+[webserver]
+192.168.33.10
+[grafanaserver]
+192.168.33.20
+
+[all:vars]
+ansible_conection=ssh
+ansible_ssh_user=vagrant
+ansible_ssh_pass=vagrant
