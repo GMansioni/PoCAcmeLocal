@@ -38,7 +38,7 @@ Vagrant.configure("2") do |config|
 		su vagrant -c "ansible-galaxy collection install community.grafana"
     SHELL
     ubuntu.vm.provision :setup, type: :ansible_local do |ansible|
-        ansible.playbook = "mean.yml"
+        ansible.playbook = "main.yml"
         ansible.provisioning_path = "/vagrant"
         ansible.inventory_path = "/vagrant/hosts"
 				ansible.limit = :all

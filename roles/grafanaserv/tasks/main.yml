@@ -1,7 +1,7 @@
 ---
 # tasks file for grafanaserv
 
-# Seecion Servidor Grafana
+# Seccion Servidor Grafana
 
 - name: "Instalar clave Grafana"
   apt_key:
@@ -24,18 +24,6 @@
 - name: "Configuracion Grafana"
   template: src=grafana.conf.j2 dest=/etc/grafana/grafana.ini
   notify: restart_grafana
-
-#- name: "Grafana server started"
-#  service:
-#    name: grafana-server
-#    enabled: true
-#    state: started
-
-#- name: "Comprobar si grafana es accesible."
-#  uri:
-#    url: http://127.0.0.1:3000
-#    method: GET
-#    status_code: 200
 
 # Seccion prometheus
 - name: "Instalar Prometheus"
